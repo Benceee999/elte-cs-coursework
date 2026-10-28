@@ -1,0 +1,16 @@
+{
+    "6a3cebd1dad77": {
+        "username": "admin",
+        "email": "admin@partyzone.hu",
+        "password": "$2y$12$DhUvLHJ1DwpeKz3HukmLkudLKO7CAGW.vrASBEIHqIABt.MYuHpP.",
+        "role": "admin",
+        "id": "6a3cebd1dad77"
+    },
+    "6a3cec5ea4b31": {
+        "username": "user",
+        "email": "user@user.user",
+        "password": "$2y$12$4Ym9EP3p8TPkWDlASkZPq.jPxkAJYC1GjRdl2HvsoEIy7FdMQUnqm",
+        "role": "user",
+        "id": "6a3cec5ea4b31"
+    }
+}

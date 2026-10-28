@@ -1,0 +1,43 @@
+{
+    "6a3cee5377a69": {
+        "name": "Bajusz Patrik",
+        "platforms": [
+            "6a3cee5377a5c",
+            "6a3cee5377a61"
+        ],
+        "image": "https:\/\/avatars.akamai.steamstatic.com\/7f44effe25d38f6ed25b563272e51f0ad7395354_full.jpg",
+        "type": "6a3cee5377a64",
+        "id": "6a3cee5377a69"
+    },
+    "6a3cee5377a6c": {
+        "name": "LordKyron",
+        "platforms": [
+            "6a3cee5377a5e",
+            "6a3cee5377a60"
+        ],
+        "image": "https:\/\/avatars.akamai.steamstatic.com\/62c43db1999718163e9817d92adfd7d53feeef71_full.jpg",
+        "type": "6a3cee5377a65",
+        "id": "6a3cee5377a6c"
+    },
+    "6a3cee5377a6e": {
+        "name": "B3RN4TH",
+        "platforms": [
+            "6a3cee5377a5c",
+            "6a3cee5377a5e",
+            "6a3cee5377a62"
+        ],
+        "image": "https:\/\/avatars.akamai.steamstatic.com\/49fc6e01b123169d55044dff59add1047557bf82_full.jpg",
+        "type": "6a3cee5377a66",
+        "id": "6a3cee5377a6e"
+    },
+    "6a3cee5377a6f": {
+        "name": "Rajosan",
+        "platforms": [
+            "6a3cee5377a5c",
+            "6a3cee5377a61"
+        ],
+        "image": "https:\/\/avatars.akamai.steamstatic.com\/175b69ec3103a04dd91c8c12f48645c891438112_full.jpg",
+        "type": "6a3cee5377a65",
+        "id": "6a3cee5377a6f"
+    }
+}
