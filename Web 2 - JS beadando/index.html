@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>PartyZone Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>PartyZone Adminisztráció</h1>
+        <div id="navigation">
+            <span class="nav-btn current" data-pageid="page-celebek">Celebek & Típusok</span>
+            <span class="nav-btn" data-pageid="page-platformok">Platformok & Típusok</span>
+            <span class="nav-btn" data-pageid="page-statisztikak">Statisztikák</span>
+        </div>
+    </header>
+
+    <main>
+        <div id="page-celebek" class="page">
+            <h2>Celebek és Celebtípusok Kezelése</h2>
+            
+            <div class="grid-2">
+                <div class="panel">
+                    <h3 id="celebtype-form-title">Új Celebtípus</h3>
+                    <input type="hidden" id="celebtype-id">
+                    <label>Név: <input type="text" id="celebtype-name"></label>
+                    <button id="save-celebtype-btn" class="btn-success">Mentés</button>
+                    <button id="cancel-celebtype-btn" class="btn-cancel hidden">Mégse</button>
+                    <div id="celebtype-error" class="error"></div>
+                    
+                    <ul id="celebtype-list" class="list-group mt-10"></ul>
+                </div>
+
+                <div class="panel">
+                    <h3 id="celeb-form-title">Új Celeb hozzáadása</h3>
+                    <input type="hidden" id="celeb-id">
+                    <label>Név: <input type="text" id="celeb-name"></label><br>
+                    <label>Celebtípus: <select id="celeb-type"></select></label><br><br>
+                    
+                    <label>Platformok:</label>
+                    <div id="celeb-platforms-container" class="checkbox-grid"></div>
+                    
+                    <br>
+                    <button id="save-celeb-btn" class="btn-success">Mentés</button>
+                    <button id="cancel-celeb-btn" class="btn-cancel hidden">Mégse</button>
+                    <div id="celeb-error" class="error"></div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <h3>Keresés és szűrés</h3>
+                <div class="form-row">
+                    <label>Név: <input type="text" id="filter-celeb-name" placeholder="Keresés..."></label>
+                    <label>Platform/Típus: <select id="filter-celeb-platform"></select></label>
+                    <button id="filter-celeb-btn" class="btn-primary">Szűrés futtatása</button>
+                </div>
+            </div>
+
+            <h3>Celebek Listája</h3>
+            <ul id="celeb-list" class="list-group"></ul>
+        </div>
+
+        <div id="page-platformok" class="page hidden">
+            <h2>Platformok és Platformtípusok</h2>
+            
+            <div class="grid-2">
+                <div class="panel">
+                    <h3 id="type-form-title">Új Platformtípus</h3>
+                    <input type="hidden" id="type-id">
+                    <label>Név: <input type="text" id="type-name"></label>
+                    <button id="save-type-btn" class="btn-success">Mentés</button>
+                    <button id="cancel-type-btn" class="btn-cancel hidden">Mégse</button>
+                    <div id="type-error" class="error"></div>
+                    
+                    <ul id="type-list" class="list-group mt-10"></ul>
+                </div>
+
+                <div class="panel">
+                    <h3 id="platform-form-title">Új Platform</h3>
+                    <input type="hidden" id="platform-id">
+                    <label>Név: <input type="text" id="platform-name"></label><br>
+                    <label>Szín: <input type="color" id="platform-color"></label><br>
+                    <label>Típus: <select id="platform-type"></select></label><br>
+                    <button id="save-platform-btn" class="btn-success">Mentés</button>
+                    <button id="cancel-platform-btn" class="btn-cancel hidden">Mégse</button>
+                    <div id="platform-error" class="error"></div>
+
+                    <ul id="platform-list" class="list-group mt-10"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="page-statisztikak" class="page hidden">
+            <h2>Statisztikák (Kattints az oszlopok nevére a rendezéshez!)</h2>
+            
+            <div class="grid-2">
+                <div class="panel stat-panel">
+                    <h3>Celebek száma platformonként</h3>
+                    <table class="stat-table">
+                        <thead>
+                            <tr>
+                                <th onclick="sortStat('stat1', 'name')" class="clickable">Platform ↕</th>
+                                <th onclick="sortStat('stat1', 'count')" class="clickable">Celebek ↕</th>
+                                <th>Arány</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stat-body-1"></tbody>
+                    </table>
+                </div>
+
+                <div class="panel stat-panel">
+                    <h3>Celebek száma platformtípusonként</h3>
+                    <table class="stat-table">
+                        <thead>
+                            <tr>
+                                <th onclick="sortStat('stat2', 'name')" class="clickable">Platformtípus ↕</th>
+                                <th onclick="sortStat('stat2', 'count')" class="clickable">Celebek ↕</th>
+                                <th>Arány</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stat-body-2"></tbody>
+                    </table>
+                </div>
+
+                <div class="panel stat-panel">
+                    <h3>Platformok száma típusonként</h3>
+                    <table class="stat-table">
+                        <thead>
+                            <tr>
+                                <th onclick="sortStat('stat3', 'name')" class="clickable">Platformtípus ↕</th>
+                                <th onclick="sortStat('stat3', 'count')" class="clickable">Platformok ↕</th>
+                                <th>Arány</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stat-body-3"></tbody>
+                    </table>
+                </div>
+
+                <div class="panel stat-panel">
+                    <h3>Celebek száma celebtípusonként</h3>
+                    <table class="stat-table">
+                        <thead>
+                            <tr>
+                                <th onclick="sortStat('stat4', 'name')" class="clickable">Celebtípus ↕</th>
+                                <th onclick="sortStat('stat4', 'count')" class="clickable">Celebek ↕</th>
+                                <th>Arány</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stat-body-4"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
