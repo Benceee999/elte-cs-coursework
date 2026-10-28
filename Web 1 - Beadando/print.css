@@ -1,0 +1,146 @@
+@media print {
+  @page {
+    margin: 12mm;
+  }
+
+  header,
+  nav,
+  footer,
+  aside,
+  .skip-link,
+  .btn,
+  .badge,
+  .alert,
+  .toast {
+    display: none !important;
+  }
+
+  html,
+  body,
+  main {
+    background: none !important;
+    color: #000 !important;
+  }
+
+  h1 {
+    font-size: 20pt;
+    margin: 0 0 8pt;
+  }
+
+  h2 {
+    font-size: 16pt;
+    margin: 10pt 0 6pt;
+  }
+
+  h3 {
+    font-size: 13pt;
+    margin: 8pt 0 6pt;
+  }
+
+  p,
+  li {
+    font-size: 10pt;
+    line-height: 1.35;
+    margin: 4pt 0;
+  }
+
+  ul,
+  ol {
+    margin: 4pt 0 4pt 18pt;
+  }
+
+  img,
+  figure {
+    max-width: 50% !important;
+    height: auto !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  video,
+  iframe,
+  audio {
+    display: none !important;
+  }
+
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    page-break-inside: auto;
+    break-inside: auto;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tfoot {
+    display: table-footer-group;
+  }
+
+  tr,
+  td,
+  th,
+  caption {
+    color: #000 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  th,
+  td {
+    border: 1px solid #000;
+    padding: 4pt 6pt;
+  }
+
+  caption {
+    caption-side: top;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: 4pt;
+  }
+
+  .row {
+    display: block !important;
+  }
+
+  [class*="col-"] {
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  a[href^="http"]:not(.btn)::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    word-break: break-all;
+  }
+
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after,
+  a[href^="mailto:"]::after,
+  a[href^="tel:"]::after {
+    content: "";
+  }
+
+  p,
+  li,
+  blockquote,
+  table {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .figure-caption,
+  .text-muted {
+    color: #000 !important;
+  }
+
+  .shadow,
+  .shadow-sm,
+  .shadow-lg {
+    box-shadow: none !important;
+  }
+}

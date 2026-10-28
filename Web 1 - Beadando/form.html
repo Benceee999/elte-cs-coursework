@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Magyar Counter-Strike - Űrlap</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+  <a href="#maincontent" class="skip-link">Tartalomra ugrás</a>
+
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Kezdőlap</a></li>
+            <li class="nav-item"><a class="nav-link" href="torzsi.html">Torzsi</a></li>
+            <li class="nav-item"><a class="nav-link" href="slend.html">Sl3nd</a></li>
+            <li class="nav-item"><a class="nav-link" href="mouz.html">Mousesports</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="form.html">Űrlap</a></li>
+          </ul>
+          <button id="contrastToggle" class="btn btn-warning">Nagy kontraszt</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="maincontent" class="container py-4">
+    <h1 class="mb-4">Űrlap</h1>
+    <section>
+      <h2 id="form-section-title" class="h4">Közösségi visszajelzés űrlap</h2>
+      <article>
+        <h3 id="form-article-title" class="h5">Mondd el a véleményed!</h3>
+        <form class="row g-3" action="mailto:" method="post" enctype="text/plain">
+          <div class="col-12 col-md-6">
+            <label for="favoriteplayer" class="form-label">Neked ki a kedvenc játékosod?</label>
+            <input type="text" class="form-control" id="favoriteplayer" name="favoriteplayer" maxlength="20" required>
+          </div>
+          <div class="col-12 col-md-6">
+            <fieldset class="row g-2">
+              <legend class="col-form-label pt-0">Neked ki a kedvenc magyar játékosod?</legend>
+              <div class="col-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="favoritehungarian" id="torzsiRadio" value="torzsi"
+                    required>
+                  <label class="form-check-label" for="torzsiRadio">Torzsi</label>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="favoritehungarian" id="slendRadio" value="sl3nd"
+                    required>
+                  <label class="form-check-label" for="slendRadio">sl3nd</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="col-12">
+            <label for="velemeny" class="form-label">Mi a véleményed a magyar játékosokról?</label>
+            <textarea class="form-control" id="velemeny" name="velemeny" rows="4" required maxlength="500"></textarea>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="hirlevel" name="hirlevel">
+              <label class="form-check-label" for="hirlevel">Feliratkozás a hírlevélre</label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Küldés</button>
+          </div>
+        </form>
+      </article>
+    </section>
+  </main>
+
+  <footer class="text-center py-3">
+    <p>&copy; 2025 Magyar Counter‑Strike e‑sport</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <script>document.getElementById('contrastToggle').addEventListener('click', function () {
+      document.body.classList.toggle('high-contrast');
+    });</script>
+</body>
+
+</html>

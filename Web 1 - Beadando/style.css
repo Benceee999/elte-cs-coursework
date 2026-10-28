@@ -1,0 +1,182 @@
+html {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 100%;
+}
+
+body {
+  background-color: #1B1F23 !important;
+  color: white !important;
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+ul,
+ol {
+  text-align: left;
+}
+
+nav {
+  background-color: #2D3844 !important;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+}
+
+nav a {
+  color: white !important;
+  font-size: 0.925rem;
+}
+
+.nav-link.active {
+  color: #FFD33D !important;
+}
+
+
+small,
+.small-text {
+  font-family: Arial, sans-serif;
+  font-size: 0.875rem;
+}
+
+.törtenet {
+  margin: 1% 2% 0;
+  color: white;
+  background-color: #364250;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+}
+
+.törtenet p {
+  padding: 1%;
+}
+
+.pera-team {
+  background-image: url("images/Pera_Esports_allmode.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  border-radius: 8px;
+  color: white;
+}
+
+.pera-team .list-group,
+.pera-team .list-group-item {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+a:link {
+  color: #FFD33D;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #cf1111;
+  text-decoration: underline;
+}
+
+nav a:link,
+nav a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 2px dashed #58A6FF;
+  outline-offset: 2px;
+}
+
+strong em {
+  color: #15ff00;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #58A6FF;
+  color: #1B1F23;
+  padding: 0.5em 1em;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0.25em 0.25em 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.skip-link:focus {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  width: auto;
+  white-space: normal;
+  text-decoration: underline;
+}
+
+.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.high-contrast a {
+  color: #ff0 !important;
+}
+
+.high-contrast .navbar,
+.high-contrast footer {
+  background-color: #000 !important;
+}
+
+video {
+  max-width: 50% !important;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+img {
+  max-width: 200px;
+  border-radius: 8px
+}
+
+.img-fluid {
+  max-width: 50% !important;
+  height: auto;
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+
+td,
+th,
+tr,
+caption {
+  color: white;
+}
+
+.DeadFox {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.figure .figure-caption,
+figure figcaption,
+figcaption,table caption,
+caption {
+  color: #fff !important;
+}
